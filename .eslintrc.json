@@ -1,0 +1,23 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true 
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typecript-eslint/recommend"
+  ],
+  "overrides": [
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parseroptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugin": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+  }
+}
