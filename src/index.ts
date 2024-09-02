@@ -6,12 +6,14 @@ import { MongoClient } from "./database/mongo";
 
 const main = async () => {
   config();
+
   const app = express();
 
   await MongoClient.connect();
   
   app.get("/users", async (req, res) => {
     const mongoGetUsersRepository = new MongoGetUsersRepository();
+
     const getUsersController = new GetUsersController(mongoGetUsersRepository);
 
     const { body, statusCode } = await getUsersController.handle();

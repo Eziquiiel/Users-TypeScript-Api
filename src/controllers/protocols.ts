@@ -1,4 +1,5 @@
 export interface HttpResponse<T> {
-    statusCode: number
+    statusCode: number;
     body: T | string;
+
 }
